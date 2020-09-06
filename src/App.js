@@ -8,15 +8,19 @@ import {
   Route,
 } from 'react-router-dom';
 import NavBar from './NavBar';
+import Logo from './logo.png'
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <img src={Logo} />
         <NavBar />
-        <Route path="/" component={HomePage} exact />
-        <Route path="/about" component={AboutPage} />    
-        <Route path="/iqtest" component={IQtestPage} />
+        <div id="page-body">
+          <Route path="/" component={HomePage} exact />
+          <Route path="/about" component={AboutPage} />    
+          <Route path="/iqtest" component={IQtestPage} />
+        </div>
       </div>
     </Router>
   );
